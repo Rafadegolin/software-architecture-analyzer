@@ -1,12 +1,12 @@
 {
-  "name": "software-architecture-analyzer",
-  "displayName": "Software Architecture Analyzer",
+  "name": "project-architect-ai",
+  "displayName": "Project Architect AI",
   "description": "Analisa arquitetura de projetos utilizando LLM",
   "icon": "icon.png",
   "publisher": "RafaelDegolindaSilva",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Rafadegolin/software-architecture-analyzer"
+    "url": "https://github.com/Rafadegolin/project-architect-ai"
   },
   "license": "MIT",
   "keywords": [
@@ -18,7 +18,7 @@
     "documentation",
     "code-analysis"
   ],
-  "version": "1.0.0",
+  "version": "1.2.0",
   "engines": {
     "vscode": "^1.106.2"
   },
@@ -30,25 +30,40 @@
   "contributes": {
     "commands": [
       {
-        "command": "software-architecture-analyzer.analyze",
-        "title": "🔍 Analisar Arquitetura do Projeto"
+        "command": "project-architect-ai.analyzeSummaryPt",
+        "title": "🔍 Relatório: Resumo do Projeto (PT-BR)"
+      },
+      {
+        "command": "project-architect-ai.analyzeSummaryEn",
+        "title": "🔍 Report: Project Summary (EN)"
+      },
+      {
+        "command": "project-architect-ai.analyzeTechnicalPt",
+        "title": "📋 Relatório: Análise Técnica Detalhada (PT-BR)"
+      },
+      {
+        "command": "project-architect-ai.analyzeTechnicalEn",
+        "title": "📋 Report: Detailed Technical Analysis (EN)"
+      },
+      {
+        "command": "project-architect-ai.generateCommit",
+        "title": "📝 Gerar Commit Inteligente"
       }
     ],
     "configuration": {
-      "title": "Software Architecture Analyzer",
+      "title": "Project Architect AI",
       "properties": {
-        "architectureAnalyzer.apiKey": {
+        "projectArchitectAI.apiKey": {
           "type": "string",
           "default": "",
-          "description": "API Key da OpenAI ou Anthropic",
+          "description": "API Key da OpenAI",
           "order": 1
         },
-        "architectureAnalyzer.provider": {
+        "projectArchitectAI.provider": {
           "type": "string",
           "default": "openai",
           "enum": [
-            "openai",
-            "anthropic"
+            "openai"     
           ],
           "description": "Provider de LLM a ser usado",
           "order": 2
