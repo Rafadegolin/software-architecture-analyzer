@@ -35,7 +35,7 @@
       }
     ],
     "configuration": {
-      "title": "Architecture Analyzer",
+      "title": "Software Architecture Analyzer",
       "properties": {
         "architectureAnalyzer.apiKey": {
           "type": "string",
